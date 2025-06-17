@@ -67,7 +67,7 @@ This project is a learning and hands-on implementation task designed for cyberse
 ## Contributors
 
 - 👩‍💻 Qamash Bashir - Cybersecurity Intern
-- 🧠 Faizan Khan Mentor/Supervisor (Optional)
+- 🧠 Faizan Khan   - Mentor
 
 ## License
 
