@@ -1,4 +1,47 @@
 SCREENSHOTS OF THIS TASK:
+## 1. Install Node.js and npm
+sudo apt update
+sudo apt install nodejs npm -y
+
+## 2. Clone the Mock Web Application (e.g., Juice Shop)
+git clone https://github.com/juice-shop/juice-shop.git
+cd juice-shop
+
+## 3. Install Dependencies
+npm install
+
+## 4. Start the Application
+npm start
+
+# Access the app in browser:
+http://localhost:3000
+
+
+# ---------------------------
+# OWASP ZAP Usage
+# ---------------------------
+
+# Start ZAP (or launch it manually)
+zap.sh
+
+# Steps in ZAP:
+# 1. Start a new session.
+# 2. Configure browser to use ZAP as a proxy:
+#    HTTP Proxy: 127.0.0.1
+#    Port: 8080
+# 3. Open the app (http://localhost:3000) in browser.
+# 4. Right-click target in ZAP > Attack > Active Scan
+
+# ---------------------------
+# Manual Testing Inputs
+# ---------------------------
+
+## Reflected XSS Payload:
+<script>alert('XSS');</script>
+
+## SQL Injection Payload for Login Form:
+Username: admin' OR '1'='1
+Password: anything
 
 ![1](https://github.com/user-attachments/assets/9b46481f-7862-4a26-83b5-84277fde3f5a)
 
