@@ -1,4 +1,74 @@
 Screenshots
+1. Setup Project Directory
+--------------------------
+mkdir user-management-secure
+cd user-management-secure
+
+Explanation:
+- mkdir: Creates a new folder for your project.
+- cd: Enters the project folder.
+
+2. Initialize Node.js Project
+-----------------------------
+npm init -y
+
+Explanation:
+- Initializes a new Node.js project and creates a package.json file.
+
+3. Install Required Dependencies
+-------------------------------
+npm install express mongoose bcrypt jsonwebtoken validator helmet
+
+Explanation:
+- express: Web framework to build APIs.
+- mongoose: MongoDB connection and management.
+- bcrypt: Secure password hashing.
+- jsonwebtoken: Token-based authentication.
+- validator: Validate and sanitize input (e.g., email).
+- helmet: Adds security HTTP headers.
+
+4. Create Necessary Files
+-------------------------
+touch app.js routes/user.js models/User.js
+
+Explanation:
+- Creates main server file and folders for user routes and models.
+
+5. Setup MongoDB
+----------------
+sudo systemctl start mongod
+sudo systemctl enable mongod
+
+Explanation:
+- Starts and enables MongoDB to run in the background.
+
+6. Start Your Backend Server
+----------------------------
+node app.js
+
+Expected Output:
+Server running at http://localhost:3000
+
+7. Test API with curl
+---------------------
+curl -X POST http://localhost:3000/api/register \\
+  -H "Content-Type: application/json" \\
+  -d '{"email": "test@example.com", "password": "Secret123"}'
+
+Explanation:
+- Simulates a user registering to your backend securely.
+
+8. View Data in MongoDB
+-----------------------
+mongo
+
+> use userdb
+
+> db.users.find().pretty()
+
+Explanation:
+- use userdb: Connects to the MongoDB database.
+- db.users.find().pretty(): Displays all users in a readable format.
 
 ![1](https://github.com/user-attachments/assets/ed1e254c-8fa6-4ca3-8512-68ff4b074e3b)
 ![2](https://github.com/user-attachments/assets/47075306-5d13-47bd-badd-9b189da713e7)
